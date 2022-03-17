@@ -18,18 +18,6 @@ const withTM = require('next-transpile-modules')([
 const withFonts = require('next-fonts')
 
 module.exports = withPlugins(
-  [
-    withTM,
-    [
-      withFonts,
-      {
-        enableSvg: true,
-        webpack(config, options) {
-          return config
-        },
-      },
-    ],
-    [withExpo, { projectRoot: __dirname }],
-  ],
+  [withTM, withFonts, [withExpo, { projectRoot: __dirname }]],
   nextConfig
 )
