@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import { StyleSheet, TouchableOpacity, Text, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, Text, View, Platform } from 'react-native'
 import { Button, Colors, TextInput } from 'react-native-paper'
 import { useRouter } from 'solito/router'
-
-// import { Routes } from '../navigation/Routes'
-// import { useAuthentication } from '../context/Authentication'
+import { useAuthentication } from './AuthContext'
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState('')
@@ -17,9 +15,12 @@ export const LoginScreen = () => {
     push('/terms/')
   }
 
-  // const { setUser } = useAuthentication()
+  const { setUser } = useAuthentication()
   function handleLogin() {
-    // setUser(true)
+    setUser(true)
+    if(Platform.OS ==='web'){
+      push('/home')
+    }
   }
 
   function toggleSecureIcon() {

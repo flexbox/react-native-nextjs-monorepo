@@ -3,9 +3,9 @@ import { View, Text, Image, ScrollView } from "react-native";
 import { Appbar, Colors, Title } from "react-native-paper";
 import { useRouter } from "solito/router";
 
-
 export function TermsScreen() {
   const { back } = useRouter()
+
   function goBack() {
     back()
   }

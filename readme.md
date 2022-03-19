@@ -18,7 +18,6 @@
 ## 🗂 Folder layout
 
 - `apps` entry points for each app
-
   - `expo`
   - `next`
 
@@ -40,7 +39,8 @@ yarn native
 
 ## 🆕 Add new dependencies
 
-### Pure JS dependencies
+<details>
+<summary>Pure JS dependencies</summary>
 
 If you're installing a JavaScript-only dependency that will be used across platforms, install it in `packages/app`:
 
@@ -50,8 +50,10 @@ yarn add date-fns
 cd ../..
 yarn
 ```
+</details>
 
-### Native dependencies
+<details>
+<summary>Native dependencies</summary>
 
 If you're installing a library with any native code, you must install it in `apps/expo`:
 
@@ -64,6 +66,7 @@ yarn
 ```
 
 You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
+</details>
 
 ## 👏 Kudos
 

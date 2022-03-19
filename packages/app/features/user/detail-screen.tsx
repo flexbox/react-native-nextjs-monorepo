@@ -13,7 +13,7 @@ export function UserDetailScreen() {
         sx={{ textAlign: 'center', mb: 16, fontWeight: 'bold' }}
       >{`User ID: ${id}`}</Text>
 
-      <TextLink href="/">👈 Go Home</TextLink>
+      <TextLink href="/home">👈 Go Home</TextLink>
     </View>
   )
 }
