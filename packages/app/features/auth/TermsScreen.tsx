@@ -1,10 +1,13 @@
 import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
 import { Appbar, Colors, Title } from "react-native-paper";
+import { useRouter } from "solito/router";
 
-export function TermsScreen({ navigation }) {
+
+export function TermsScreen() {
+  const { back } = useRouter()
   function goBack() {
-    // navigation.goBack();
+    back()
   }
 
   return (
@@ -14,7 +17,7 @@ export function TermsScreen({ navigation }) {
         <Appbar.Content title="Terms and Conditions" />
       </Appbar.Header>
       <View style={{ padding: 32 }}>
-        <Text>
+        <Text style={{ marginBottom: 16 }}>
           This Terms of Service, including all supplemental terms as amended
           from time to time, governs your use of the online game, service, or
           web site known as Star Wars: The Old Republic ("TOR" and the "TOR
@@ -28,7 +31,7 @@ export function TermsScreen({ navigation }) {
           website from which you may also print a copy for your records.
         </Text>
         <Title>1. Account</Title>
-        <Text>
+        <Text style={{ marginBottom: 16 }}>
           A TOR Account ("Account") may be required to access and use TOR
           Services. If you have questions about Account registration, please
           contact us by visiting http://www.swtor.com/support. To create a TOR
@@ -53,7 +56,7 @@ export function TermsScreen({ navigation }) {
           your password reminder words.
         </Text>
         <Title>2. Service</Title>
-        <Text>
+        <Text style={{ marginBottom: 16 }}>
           Some TOR Services require payment of a fee. You must have an Account
           and pay the subscription or other fees to participate in these
           activities. Information about subscription and other fees for TOR
@@ -61,7 +64,7 @@ export function TermsScreen({ navigation }) {
           http://www.swtor.com/support.
         </Text>
         <Title>3. Privacy</Title>
-        <Text>
+        <Text style={{ marginBottom: 16 }}>
           Your privacy is important to us. Please read the TOR Privacy Policy
           carefully for information relating to TOR collection and use of
           personal information. You may access the TOR Privacy Policy by
