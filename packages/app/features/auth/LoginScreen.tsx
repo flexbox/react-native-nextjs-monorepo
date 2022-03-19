@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native'
 import { Button, Colors, TextInput } from 'react-native-paper'
-import { useNavigation } from '@react-navigation/native'
-import { useLoginScreen } from './useLoginScreen'
+import { useRouter } from 'solito/router'
 
 // import { Routes } from '../navigation/Routes'
 // import { useAuthentication } from '../context/Authentication'
@@ -12,7 +11,11 @@ export const LoginScreen = () => {
   const [password, setPassword] = useState('')
   const [isVisble, setIsVisible] = useState(true)
 
-  const navigateToTerms = useLoginScreen()
+  const { push } = useRouter()
+
+  const navigateToTerms = () => {
+    push('/terms/')
+  }
 
   // const { setUser } = useAuthentication()
   function handleLogin() {
