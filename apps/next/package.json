@@ -12,11 +12,14 @@
     "@expo/next-adapter": "^3.1.20",
     "app": "*",
     "next": "12.1.0",
+    "next-fonts": "^1.5.1",
     "raf": "^3.4.1"
   },
   "devDependencies": {
     "@types/node": "17.0.21",
+    "file-loader": "^6.2.0",
     "next-compose-plugins": "^2.2.1",
-    "next-transpile-modules": "^9.0.0"
+    "next-transpile-modules": "^9.0.0",
+    "ttf-loader": "^1.0.2"
   }
 }

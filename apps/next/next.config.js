@@ -15,8 +15,9 @@ const withTM = require('next-transpile-modules')([
   '@motify/components',
   'app',
 ])
+const withFonts = require('next-fonts')
 
 module.exports = withPlugins(
-  [withTM, [withExpo, { projectRoot: __dirname }]],
+  [withTM, withFonts, [withExpo, { projectRoot: __dirname }]],
   nextConfig
 )
