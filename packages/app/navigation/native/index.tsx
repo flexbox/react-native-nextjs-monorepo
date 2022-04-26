@@ -3,7 +3,7 @@ import { useAuthentication } from 'app/features/auth/AuthContext'
 import { LoginScreen } from 'app/features/auth/LoginScreen'
 import { TermsScreen } from 'app/features/auth/TermsScreen'
 
-import { HomeScreen } from '../../features/home/screen'
+import { HomeScreen } from '../../features/home/HomeScreen'
 import { UserDetailScreen } from '../../features/user/detail-screen'
 import { AuthNavigator } from './AuthNavigator'
 import { HomeNavigator } from './HomeNavigator'
