@@ -9,6 +9,7 @@
     "expo-linking": "^3.0.0",
     "moti": "0.18.0-alpha.8",
     "react-native-paper": "^4.11.2",
+    "react-query": "^3.35.0",
     "solito": "0.0.22"
   }
 }
